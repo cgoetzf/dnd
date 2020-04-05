@@ -9,10 +9,28 @@ namespace DndOnline.Controllers
     public class MasterController : Controller
     {
         // GET: Master
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
+            InitPage();
             return View();
+        }
+        public ActionResult Battle()
+        {
+            InitPage();
+            return View();
+        }
+        public ActionResult Store()
+        {
+            InitPage();
+            return View();
+        }
+        public void InitPage()
+        {
+            @Session["UserFullName"] = "Player Name";
+            ViewBag.Printable = false;
+            ViewBag.PageSubtitle = "Subtitle";
+            ViewBag.PageTitle = "Title";
         }
     }
 }

@@ -130,11 +130,11 @@
     <Compile Include="Database\Connections\PgDb.cs" />
     <Compile Include="Database\DAOs\UserDao.cs" />
     <Compile Include="Database\Interfaces\IDataAccessObject.cs" />
-    <Compile Include="Database\Models\CharacterModel.cs" />
-    <Compile Include="Database\Models\ClassModel.cs" />
-    <Compile Include="Database\Models\EquipmentModel.cs" />
-    <Compile Include="Database\Models\RaceModel.cs" />
-    <Compile Include="Database\Models\UserModel.cs" />
+    <Compile Include="Models\CharacterModel.cs" />
+    <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\EquipmentModel.cs" />
+    <Compile Include="Models\RaceModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +158,9 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Player\Battle.cshtml" />
     <Content Include="Views\Home\Monster.cshtml" />
+    <Content Include="Views\Player\Store.cshtml" />
+    <Content Include="Views\Master\Battle.cshtml" />
+    <Content Include="Views\Master\Store.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Master\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

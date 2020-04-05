@@ -11,10 +11,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/DndOnline.dll">
-      <publishTime>04/01/2020 23:41:30</publishTime>
+      <publishTime>04/05/2020 14:12:03</publishTime>
     </File>
     <File Include="bin/DndOnline.pdb">
-      <publishTime>04/01/2020 23:41:30</publishTime>
+      <publishTime>04/05/2020 14:12:03</publishTime>
     </File>
     <File Include="bin/itextsharp.dll">
       <publishTime>06/20/2019 17:39:40</publishTime>
@@ -289,17 +289,26 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Home/Monster.cshtml">
       <publishTime>04/01/2020 23:41:22</publishTime>
     </File>
+    <File Include="Views/Master/Battle.cshtml">
+      <publishTime>04/05/2020 14:11:38</publishTime>
+    </File>
+    <File Include="Views/Master/Store.cshtml">
+      <publishTime>04/05/2020 14:11:45</publishTime>
+    </File>
     <File Include="Views/Player/Battle.cshtml">
       <publishTime>01/04/2020 22:47:34</publishTime>
     </File>
     <File Include="Views/Player/Sheet.cshtml">
       <publishTime>03/29/2020 20:27:19</publishTime>
     </File>
+    <File Include="Views/Player/Store.cshtml">
+      <publishTime>04/05/2020 13:52:56</publishTime>
+    </File>
     <File Include="Views/Shared/_LoginLayout.cshtml">
       <publishTime>03/29/2020 22:32:17</publishTime>
     </File>
     <File Include="Views/Shared/_MainLayout.cshtml">
-      <publishTime>03/30/2020 22:00:43</publishTime>
+      <publishTime>04/05/2020 14:11:27</publishTime>
     </File>
     <File Include="Views/web.config">
       <publishTime>03/29/2020 18:06:49</publishTime>

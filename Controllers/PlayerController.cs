@@ -9,27 +9,32 @@ namespace DndOnline.Controllers
     public class PlayerController : Controller
     {
         // GET: Player
-        [Authorize]
+       // [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-        [Authorize]
+        //[Authorize]
         public ActionResult Sheet()
         {
-            @Session["UserFullName"] = "Carlos Goetz";
-            ViewBag.Printable = false;
-            ViewBag.PageSubtitle = "Akkar";
-            ViewBag.PageTitle = "Ficha do Personagem";
+            InitPage();
             return View();
         }
         public ActionResult Battle()
         {
-            @Session["UserFullName"] = "Carlos Goetz";
-            ViewBag.Printable = false;
-            ViewBag.PageSubtitle = "Batalha do castelo";
-            ViewBag.PageTitle = "Batalha";
+            InitPage();
             return View();
+        }
+        public ActionResult Store()
+        {
+            return View();
+        }
+        public void InitPage()
+        {
+            @Session["UserFullName"] = "Player Name";
+            ViewBag.Printable = false;
+            ViewBag.PageSubtitle = "Subtitle";
+            ViewBag.PageTitle = "Title";
         }
     }
 }

@@ -10,30 +10,30 @@ namespace DndOnline.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
-
-            ViewBag.Printable = false;
-            ViewBag.PageSubtitle = "sub";
-            ViewBag.PageTitle = "title";
+            InitPage();
             return View();
         }
         public ActionResult Monster()
         {
             MonsterModel model = new MonsterModel();
-            ViewBag.Printable = false;
-            ViewBag.PageSubtitle = "Edição";
-            ViewBag.PageTitle = "Monster";
+            InitPage();
             return View(model);
         }
         [HttpPost]
         public ActionResult Monster(MonsterModel model)
         {
-            ViewBag.Printable = false;
-            ViewBag.PageSubtitle = "Edição";
-            ViewBag.PageTitle = "Monster";
+            InitPage();
             return View(model);
+        }
+        public void InitPage()
+        {
+            @Session["UserFullName"] = "Player Name";
+            ViewBag.Printable = false;
+            ViewBag.PageSubtitle = "Subtitle";
+            ViewBag.PageTitle = "Title";
         }
     }
 }
