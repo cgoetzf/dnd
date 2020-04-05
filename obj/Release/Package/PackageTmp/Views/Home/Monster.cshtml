@@ -1,0 +1,90 @@
+﻿@model DndOnline.Models.MonsterModel
+@{
+    ViewBag.Title = "Monster";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@Html.ValidationSummary(true)
+@using (Html.BeginForm("Monster", "Home", FormMethod.Post, new { enctype = "multipart/form-data", id = "ticketForm" }))
+{
+    <div class="form-row align-items-center">
+        <div class="col-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">FOR</span>
+                </div>
+                @Html.TextBoxFor(m => m.Strenght, (object)new { @class = "form-control", placeholder = "0" })
+                <div class="input-group-prepend">
+                    <span class="input-group-text">MOD</span>
+                </div>
+                @Html.TextBoxFor(m => m.Mod_Strenght, (object)new { @class = "form-control", placeholder = "0" })
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">DES</span>
+                </div>
+                @Html.TextBoxFor(m => m.Dexterity, (object)new { @class = "form-control", placeholder = "0" })
+                <div class="input-group-prepend">
+                    <span class="input-group-text">MOD</span>
+                </div>
+                @Html.TextBoxFor(m => m.Mod_Dexterity, (object)new { @class = "form-control", placeholder = "0" })
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">CON</span>
+                </div>
+                @Html.TextBoxFor(m => m.Constituition, (object)new { @class = "form-control", placeholder = "0" })
+                <div class="input-group-prepend">
+                    <span class="input-group-text">MOD</span>
+                </div>
+                @Html.TextBoxFor(m => m.Mod_Constituition, (object)new { @class = "form-control", placeholder = "0" })
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">INT</span>
+                </div>
+                @Html.TextBoxFor(m => m.Intelligence, (object)new { @class = "form-control", placeholder = "0" })
+                <div class="input-group-prepend">
+                    <span class="input-group-text">MOD</span>
+                </div>
+                @Html.TextBoxFor(m => m.Mod_Intelligence, (object)new { @class = "form-control", placeholder = "0" })
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">SAB</span>
+                </div>
+                @Html.TextBoxFor(m => m.Wisdom, (object)new { @class = "form-control", placeholder = "0" })
+                <div class="input-group-prepend">
+                    <span class="input-group-text">MOD</span>
+                </div>
+                @Html.TextBoxFor(m => m.Mod_Wisdom, (object)new { @class = "form-control", placeholder = "0" })
+            </div>
+        </div>
+        <div class="col-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">CAR</span>
+                </div>
+                @Html.TextBoxFor(m => m.Charisma, (object)new { @class = "form-control", placeholder = "0" })
+                <div class="input-group-prepend">
+                    <span class="input-group-text">MOD</span>
+                </div>
+                @Html.TextBoxFor(m => m.Mod_Charisma, (object)new { @class = "form-control", placeholder = "0" })
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-primary pull-right" name="btSubmit" value="New" id="btNew"><span class="fa fa-floppy-o"></span> Salvar</button>
+        </div>
+    </div>
+}

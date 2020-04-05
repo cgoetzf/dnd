@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/Content/Images/favicon.ico" type="image/x-icon">
+    <title>@ViewBag.Title</title>
+
+    <!-- Css -->
+
+    <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Styles/bs-overwrited.css" rel="stylesheet" />
+    <link href="~/Content/Styles/main.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link href="~/Content/Fonts/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <!-- JS -->
+    <script src="~/Content/Scripts/jquery.min.js"></script>
+    <script src="~/Content/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Scripts/chart.bundle.min.js"></script>
+    <script src="~/Content/Scripts/custom.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.date.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Scripts/jquery.elastic.source.js"></script>
+    <script src="~/Scripts/additional-methods.min.js"></script>
+
+    <!-- Plugins -->
+    <link href="/Scripts/Plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <script src="/Scripts/Plugins/jquery-ui/jquery-ui.min.js"></script>
+    <link href="~/Scripts/Plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/Scripts/Plugins/datatables/jquery.dataTables.min.js"></script>
+
+    <link href="~/Content/Styles/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/Content/Styles/dataTables.responsive.css" rel="stylesheet" />
+    <script src="~/Content/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Content/Scripts/dataTables.responsive.js"></script>
+    <script src="~/Content/Plugins/tinymce/tinymce.min.js"></script>
+    <link href="~/Content/Plugins/prism/prism.css" rel="stylesheet" />
+    <script src="~/Content/Plugins/prism/prism.js"></script>
+    <script src="~/Scripts/Plugins/flot/jquery.flot.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <nav class="navbar navbar-top fixed-top flex-md-nowrap p-0 shadow justify-content-end">
+        <div class="col-md-2 bg-logo">
+            <img class="mx-auto d-block logo-img" src="~/Content/Images/dd_logo.png" width="150" />
+        </div>
+        <div class="col-md-10">
+            <i class="fa fa-2x fa-user-md text-white pull-right mt-2"></i>
+            <ul class="navbar-nav px-3 pull-left flex-column text-right">
+                <li class="nav-item text-nowrap">
+                    <span class="text-white">@Session["UserFullName"]</span>
+
+                </li>
+            </ul>
+            <ul class="navbar-nav px-3 pull-right flex-column text-right">
+                <li class="nav-item text-nowrap">
+                    <a href="~/Auth/Logout" class="text-white">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/Player/Sheet">
+                                <i class="fa fa-user-md fa-fw"></i>
+                                Ficha do Personagem
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Index">
+                                <i class="fa fa-user-plus fa-fw"></i>
+                                Novo do Personagem
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Index">
+                                <i class="fa fa-shopping-cart fa-fw"></i>
+                                Loja
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-md-10 ml-sm-auto col-lg-10">
+
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3 page-header">
+                    <h3>@ViewBag.PageTitle <small>@ViewBag.PageSubtitle</small></h3>
+                    @if (ViewBag.Printable)
+                    {
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <div class="btn-group mr-2">
+                                <button class="btn btn-sm btn-outline-orange"><i class="fa fa-external-link fa-fw"></i> Exportar</button>
+                                <button class="btn btn-sm btn-outline-orange"><i class="fa fa-print fa-fw"></i> Imprimir</button>
+                            </div>
+                        </div>
+                    }
+                </div>
+                
+                    @RenderBody()
+                
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <span class="text-white">&copy; @DateTime.Now.Year. Dungeon&Dragons. RPG da Galera</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

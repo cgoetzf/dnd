@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "Battle";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+<h5>Inimigos</h5>
+<div class="row">
+   @if (ViewBag.Zabbix != null)
+                    {
+                        foreach (var problem in ViewBag.Zabbix)
+                        {
+						                            if (problem.Severity == 1)
+                            {
+                                @Html.Raw("<li class='list-group-item d-flex justify-content-between align-items-center bg-zbx-information'>");
+                            }
+						}
+					}
+    <div class="card  battle-card col-md-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Content/Images/Characters/Bandit_thumb.jpeg" class="card-img battle-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Bandit</h5>
+                    <p class="card-text">Pontos de Vida</p>
+                    <p class="card-text">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card battle-card col-md-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Content/Images/Characters/Goblin_Thumb.jpg" class="card-img battle-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Goblin 1</h5>
+                    <p class="card-text">Pontos de Vida</p>
+                    <p class="card-text">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card battle-card col-md-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Content/Images/Characters/Goblin_Thumb.jpg" class="card-img battle-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Goblin 2</h5>
+                    <p class="card-text">Pontos de Vida</p>
+                    <p class="card-text">
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h5>Aliados</h5>
+<div class="row">
+    <div class="card battle-card col-md-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="~/Content/Images/Characters/paladin_thumb.png" class="card-img battle-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Akkar</h5>
+                    <p class="card-text">Pontos de Vida</p>
+                    <p class="card-text">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </p>
+                    <p><i class="fa fa-shield fa-fw"></i> 18</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card battle-card col-md-12">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/Content/Images/Characters/paladin_thumb.png" class="card-img" alt="...">
+            </div>
+            <div class="col-md-10">
+                <div class="card-body">
+                    <h5 class="card-title">Akkar</h5>
+                    <p class="card-text">Pontos de Vida</p>
+                    <p class="card-text">
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </p>
+                    <p><i class="fa fa-shield fa-fw"></i>18</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

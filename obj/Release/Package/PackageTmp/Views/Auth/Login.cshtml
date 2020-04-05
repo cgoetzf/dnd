@@ -1,0 +1,39 @@
+﻿@model DndOnline.Database.Models.UserModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+@using (Html.BeginForm("Login", "Auth", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-signin" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="text-center mb-4">
+        <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Dungeon&Dragons</h1>
+        <p>RPG da Galera</p>
+    </div>
+
+    <div class="form-label-group">
+        @Html.TextBoxFor(u => u.Username, new { @class = "form-control username", placeholder = "Username", type = "text", id = "input-username" })
+    </div>
+
+    <div class="form-label-group">
+        @Html.PasswordFor(u => u.Password, new { @class = "form-control password", placeholder = "Password", type = "password", id = "input-password" })
+    </div>
+
+    <div class="checkbox mb-3">
+        <label>
+            @Html.CheckBoxFor(u => u.IsPersistent) Remember me
+        </label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    if (ViewBag.WarningMessage != null)
+    {
+        <div class="alert alert-warning text-center" style="margin-top:15px;">
+            @ViewBag.WarningMessage
+        </div>
+    }
+    <p class="mt-5 mb-3 text-muted text-center">&copy; @DateTime.Now.Year</p>
+}
+
