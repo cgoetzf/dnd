@@ -3,113 +3,164 @@
     ViewBag.Title = "Battle";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-<h5>Inimigos</h5>
-<div class="row">
-   @if (ViewBag.Zabbix != null)
-                    {
-                        foreach (var problem in ViewBag.Zabbix)
-                        {
-						                            if (problem.Severity == 1)
-                            {
-                                @Html.Raw("<li class='list-group-item d-flex justify-content-between align-items-center bg-zbx-information'>");
-                            }
-						}
-					}
-    <div class="card  battle-card col-md-4">
+<div class="row  pr-5">
+    <div class="col-4">
         <div class="row">
-            <div class="col-md-4">
-                <img src="~/Content/Images/Characters/Bandit_thumb.jpeg" class="card-img battle-img" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Bandit</h5>
-                    <p class="card-text">Pontos de Vida</p>
-                    <p class="card-text">
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card battle-card col-md-4">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="~/Content/Images/Characters/Goblin_Thumb.jpg" class="card-img battle-img" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Goblin 1</h5>
-                    <p class="card-text">Pontos de Vida</p>
-                    <p class="card-text">
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/paladin_thumb.png" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Akkar</h5>
+                        <p>Pontos de Vida</p>
                         <div class="progress">
                             <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                    </p>
+                        <p><i class="fa fa-shield fa-fw"></i>18</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="card battle-card col-md-4">
         <div class="row">
-            <div class="col-md-4">
-                <img src="~/Content/Images/Characters/Goblin_Thumb.jpg" class="card-img battle-img" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Goblin 2</h5>
-                    <p class="card-text">Pontos de Vida</p>
-                    <p class="card-text">
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="col-12">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <button class="form-control">Espada Longa 1d8 + 2</button>
+                            <div class="input-group-prepend">
+                                <a class="form-control" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-eye fa-fw"></i></a>
+                            </div>
                         </div>
-                    </p>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <button class="form-control">Espada Longa 2h 1d10 + 2</button>
+                            <div class="input-group-prepend">
+                                <a class="form-control" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-eye fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <button class="form-control">Destruição Divina 2d8 + 2</button>
+                            <div class="input-group-prepend">
+                                <a class="form-control" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-eye fa-fw"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-4 pr-3">
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <h5>Destruição Divina</h5>
+                A partir do 2° nível, quando você atingir uma criatura
+                com um ataque corpo-a-corpo com arma, você pode gastar
+                um espaço de magia de qualquer classe para causar dano
+                radiante no alvo, além do dano normal da arma. O dano
+                extra é de 2d8 para um espaço de magia de 1° nível, mais
+                1d8 para cada espaço de magia acima do 1°, até o máximo
+                de 5d8. O dano aumenta em 1d8 se o alvo for um
+                corruptor ou um morto-vivo.
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="row" style="background-color:lightblue;padding:10px 10px 0 10px;">
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/ladino_thumb.jpg" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Fisk</h5>
+                        <p>Pontos de Vida</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/jafari_thumb.png" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Jafari</h5>
+                        <p>Pontos de Vida</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/terrence_thumb.jpg" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Terrence</h5>
+                        <p>Pontos de Vida</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color:lightcoral;padding:10px 10px 0 10px;">
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/Bandit_thumb.jpeg" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Bandit Boss</h5>
+                        <p>Pontos de Vida</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/Goblin_Thumb.jpg" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Goblin 1</h5>
+                        <p>Pontos de Vida</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3" style="background-color:white">
+                <div class="media">
+                    <img src="~/Content/Images/Characters/Goblin_Thumb.jpg" class="align-self-center mr-3 battle-img">
+                    <div class="media-body">
+                        <h5 class="mt-0">Goblin 1</h5>
+                        <p>Pontos de Vida</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<h5>Aliados</h5>
 <div class="row">
-    <div class="card battle-card col-md-4">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="~/Content/Images/Characters/paladin_thumb.png" class="card-img battle-img" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Akkar</h5>
-                    <p class="card-text">Pontos de Vida</p>
-                    <p class="card-text">
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </p>
-                    <p><i class="fa fa-shield fa-fw"></i> 18</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--
+    if (ViewBag.Zabbix != null)
+                     {
+                         foreach (var problem in ViewBag.Zabbix)
+                         {
+                                                     if (problem.Severity == 1)
+                             {
+                                 Html.Raw("<li class='list-group-item d-flex justify-content-between align-items-center bg-zbx-information'>");
+                             }
+                         }
+                     }
+    -->
+
 </div>
-<div class="row">
-    <div class="card battle-card col-md-12">
-        <div class="row">
-            <div class="col-md-2">
-                <img src="~/Content/Images/Characters/paladin_thumb.png" class="card-img" alt="...">
-            </div>
-            <div class="col-md-10">
-                <div class="card-body">
-                    <h5 class="card-title">Akkar</h5>
-                    <p class="card-text">Pontos de Vida</p>
-                    <p class="card-text">
-                        <div class="progress">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </p>
-                    <p><i class="fa fa-shield fa-fw"></i>18</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+

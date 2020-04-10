@@ -98,7 +98,10 @@
     <Content Include="Content\Fonts\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\Characters\Bandit_thumb.jpeg" />
     <Content Include="Content\Images\Characters\Goblin_Thumb.jpg" />
+    <Content Include="Content\Images\Characters\jafari_thumb.png" />
+    <Content Include="Content\Images\Characters\ladino_thumb.jpg" />
     <Content Include="Content\Images\Characters\paladin_thumb.png" />
+    <Content Include="Content\Images\Characters\terrence_thumb.jpg" />
     <Content Include="Content\Images\cur_copper.png" />
     <Content Include="Content\Images\cur_gold.png" />
     <Content Include="Content\Images\cur_platinum.png" />

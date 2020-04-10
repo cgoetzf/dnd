@@ -78,50 +78,51 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/Player/Sheet">
-                                <i class="fa fa-user-md fa-fw"></i>
-                                Jogador - Ficha
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/Player/Battle">
-                                <i class="fa fa-shopping-cart fa-fw"></i>
-                                Jogador - Batalha
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/Player/Store">
-                                <i class="fa fa-shopping-cart fa-fw"></i>
-                                Jogador - Loja
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/Home/Monster">
-                                <i class="fa fa-user-md fa-fw"></i>
-                                Cadastro - Monstro
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/Master/Battle">
-                                <i class="fa fa-shopping-cart fa-fw"></i>
-                                Mestre - Batalha
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/Master/Store">
-                                <i class="fa fa-shopping-cart fa-fw"></i>
-                                Mestre - Loja
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <main role="main" class="col-md-10 ml-sm-auto col-lg-10">
+            <!--
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Player/Sheet">
+                        <i class="fa fa-user-md fa-fw"></i>
+                        Jogador - Ficha
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Player/Battle">
+                        <i class="fa fa-shopping-cart fa-fw"></i>
+                        Jogador - Batalha
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Player/Store">
+                        <i class="fa fa-shopping-cart fa-fw"></i>
+                        Jogador - Loja
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Home/Monster">
+                        <i class="fa fa-user-md fa-fw"></i>
+                        Cadastro - Monstro
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Master/Battle">
+                        <i class="fa fa-shopping-cart fa-fw"></i>
+                        Mestre - Batalha
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/Master/Store">
+                        <i class="fa fa-shopping-cart fa-fw"></i>
+                        Mestre - Loja
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    -->
+            <main role="main" class="col-md-12 ml-sm-auto col-lg-12">
 
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center mb-3 page-header">
                     <h3>@ViewBag.PageTitle <small>@ViewBag.PageSubtitle</small></h3>
@@ -135,9 +136,9 @@
                         </div>
                     }
                 </div>
-                
-                    @RenderBody()
-                
+
+                @RenderBody()
+
             </main>
         </div>
     </div>

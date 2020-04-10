@@ -73,3 +73,4 @@ C:\_Workspace\DndOnline\obj\Debug\DndOnline.csproj.CoreCompileInputs.cache
 C:\_Workspace\DndOnline\obj\Debug\DndOnline.csproj.CopyComplete
 C:\_Workspace\DndOnline\obj\Debug\DndOnline.dll
 C:\_Workspace\DndOnline\obj\Debug\DndOnline.pdb
+C:\_Workspace\DndOnline\obj\Debug\DndOnline.csprojAssemblyReference.cache
