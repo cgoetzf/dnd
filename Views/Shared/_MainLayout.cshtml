@@ -61,14 +61,44 @@
             <img class="mx-auto d-block logo-img" src="~/Content/Images/dd_logo.png" width="150" />
         </div>
         <div class="col-md-10">
-            <i class="fa fa-2x fa-user-md text-white pull-right mt-2"></i>
-            <ul class="navbar-nav px-3 pull-left flex-column text-right">
+            <ul class="nav px-3 pull-left text-right">
                 <li class="nav-item text-nowrap">
-                    <span class="text-white">@Session["UserFullName"]</span>
-
+                    <a class="text-white" href="~/Player/Sheet">
+                        Ficha
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="text-white" href="~/Player/Battle">
+                        JBatalha
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="text-white" href="~/Player/Store">
+                        JLoja
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="text-white" href="~/Home/Monster">
+                        Monstro
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="text-white" href="~/Master/Battle">
+                        MBatalha
+                    </a>
+                </li>
+                <li class="nav-item text-nowrap">
+                    <a class="text-white" href="~/Master/Store">
+                        MLoja
+                    </a>
                 </li>
             </ul>
+
+            <i class="fa fa-2x fa-user text-white pull-right mt-2"></i>
             <ul class="navbar-nav px-3 pull-right flex-column text-right">
+                <li class="nav-item text-nowrap">
+                    <span class="text-white">@Session["UserFullName"]</span>
+                </li>
                 <li class="nav-item text-nowrap">
                     <a href="~/Auth/Logout" class="text-white">Logout</a>
                 </li>

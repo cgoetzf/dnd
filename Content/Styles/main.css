@@ -1154,3 +1154,18 @@ label {
 .battle-img {
     width: 100px;
 }
+.card-att {
+    text-align:center;
+    border: 1px solid #555;
+}
+.card-att .card-header {
+    font-weight:bold;
+}
+.card-att .card-body {
+    padding: 0;
+    font-size:18px;
+}
+.card-att .card-footer {
+    padding: 5px;
+    font-size: 12px;
+}
