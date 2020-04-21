@@ -1169,3 +1169,25 @@ label {
     padding: 5px;
     font-size: 12px;
 }
+.card-skills {
+    border: 1px solid #555;
+}
+    .card-skills .card-header {
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .card-skills .card-body {
+        padding: 10px;
+        font-size: 12px;
+        text-align: justify
+    }
+.modal-img {
+    width:auto;
+    max-width:50vh;
+    max-height:50vw;
+}
+
+.field-att{
+    width: 20px !important;
+}
