@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.Mvc;
-using DndOnline.Database.DAOs;
-using DndOnline.Database.Models;
+using DndOnline.Models.Database;
+using DndOnline.Models;
 
 namespace DndOnline.Controllers
 {
@@ -23,11 +23,11 @@ namespace DndOnline.Controllers
             if (ModelState.IsValid)
             {
                 
-                bool IsValidUser = new UserDao().Login(user.Username, user.Password);
+                bool IsValidUser = new UserDb().Login(user.Username, user.Password);
                 if (IsValidUser)
                 {
                     FormsAuthentication.SetAuthCookie(user.Username, user.IsPersistent);
-                    UserModel u = new UserDao().GetModelByUsername(user.Username);
+                    UserModel u = new UserDb().GetModelByUsername(user.Username);
                     @Session["UserFullName"] = u.FirstName + " " + u.LastName;
                     @Session["UserId"] = u.UserId;
                     return RedirectToAction("Index", "Home");

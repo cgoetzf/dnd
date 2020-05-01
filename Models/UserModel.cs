@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace DndOnline.Database.Models
+namespace DndOnline.Models
 {
     public class UserModel
     {

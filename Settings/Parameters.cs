@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DndOnline.Models
+namespace DndOnline.Settings
 {
-    public class EquipmentModel
+    public class Parameters
     {
+        public const string SCHEMA = "dnd.";
     }
 }

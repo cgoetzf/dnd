@@ -11,10 +11,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/DndOnline.dll">
-      <publishTime>04/21/2020 14:31:50</publishTime>
+      <publishTime>04/21/2020 15:17:10</publishTime>
     </File>
     <File Include="bin/DndOnline.pdb">
-      <publishTime>04/21/2020 14:31:50</publishTime>
+      <publishTime>04/21/2020 15:17:10</publishTime>
     </File>
     <File Include="bin/itextsharp.dll">
       <publishTime>06/20/2019 17:39:40</publishTime>
@@ -1520,7 +1520,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/29/2020 19:07:22</publishTime>
     </File>
     <File Include="Content/Styles/main.css">
-      <publishTime>04/21/2020 14:23:57</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>03/29/2020 18:06:49</publishTime>
@@ -1532,7 +1532,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/29/2020 19:08:51</publishTime>
     </File>
     <File Include="Views/Home/Monster.cshtml">
-      <publishTime>04/21/2020 14:31:36</publishTime>
+      <publishTime>04/21/2020 15:17:03</publishTime>
     </File>
     <File Include="Views/Master/Battle.cshtml">
       <publishTime>04/05/2020 14:11:38</publishTime>
@@ -1541,7 +1541,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/05/2020 14:11:45</publishTime>
     </File>
     <File Include="Views/Player/Battle.cshtml">
-      <publishTime>04/21/2020 01:09:05</publishTime>
+      <publishTime>04/21/2020 14:56:04</publishTime>
     </File>
     <File Include="Views/Player/Sheet.cshtml">
       <publishTime>03/29/2020 20:27:19</publishTime>

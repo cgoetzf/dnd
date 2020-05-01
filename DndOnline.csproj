@@ -477,10 +477,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MasterController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
-    <Compile Include="Database\Connections\Parameters.cs" />
-    <Compile Include="Database\Connections\PgDb.cs" />
-    <Compile Include="Database\DAOs\UserDao.cs" />
-    <Compile Include="Database\Interfaces\IDataAccessObject.cs" />
+    <Compile Include="Settings\Parameters.cs" />
+    <Compile Include="Settings\PgDb.cs" />
+    <Compile Include="Models\Database\UserDb.cs" />
     <Compile Include="Models\CharacterModel.cs" />
     <Compile Include="Models\ClassModel.cs" />
     <Compile Include="Models\EquipmentModel.cs" />
@@ -491,6 +490,7 @@
     </Compile>
     <Compile Include="Models\MonsterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\EncryptionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
